@@ -1,0 +1,53 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .preview{
+    margin: 0 1rem;
+  }
+
+  .login-form{
+    margin: 0 1rem;
+  }
+
+}
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+  ul.links{
+    margin: 1rem 0;
+    li {
+      list-style: none;
+      padding: .4rem;
+      color: #8e8e8e;
+    }
+    .list{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  p {
+    margin: 1rem 0;
+    a {
+      text-decoration: none;
+    }
+  }
+}
