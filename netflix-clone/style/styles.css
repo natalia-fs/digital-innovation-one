@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -13,7 +15,8 @@ button {
 body {
   min-height: 100vh;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  background: #141414;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -28,6 +31,8 @@ header {
 }
 
 header .logo {
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
   width: 94px;
   cursor: pointer;
   margin: 0 1.8rem;
@@ -51,8 +56,8 @@ header nav .links a {
   margin-right: 1rem;
   text-decoration: none;
   color: #fff;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 header nav .links a:hover {
@@ -62,9 +67,9 @@ header nav .links a:hover {
 header nav .buttons a {
   text-decoration: none;
   color: #fff;
-  margin: 0 .4rem;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  margin: 0 0.4rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 header nav .buttons a:hover {
@@ -76,8 +81,13 @@ main .featured {
   display: -ms-flexbox;
   display: flex;
   background-image: url("../assets/cover.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(transparent)), url("../assets/cover.jpg");
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent), url("../assets/cover.jpg");
   min-height: 400px;
   background-size: cover;
+  background-position: top right;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 main .featured .container {
@@ -122,8 +132,8 @@ main .featured .container .buttons button {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 4px;
-  padding: .3rem .8rem;
-  margin: 0 .4rem;
+  padding: 0.3rem 0.8rem;
+  margin: 0 0.4rem;
   font-weight: bold;
   background: white;
   cursor: pointer;
@@ -140,11 +150,61 @@ main .featured .container .buttons .play:hover {
 main .featured .container .buttons .info {
   background: #6d6d6db3;
   color: white;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 main .featured .container .buttons .info:hover {
   background-color: #6d6d6d66;
+}
+
+.owl-carousel {
+  max-height: 400px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1rem;
+  padding: .1rem;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 78px;
+  }
+  header .logo {
+    margin: 0 .8rem;
+    width: 75px;
+  }
+  header nav {
+    padding: .4rem .8rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .featured {
+    min-height: 350px;
+  }
+  main .featured .container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav .buttons a {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

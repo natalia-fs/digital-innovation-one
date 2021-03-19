@@ -3,122 +3,180 @@ $white: #fff;
 $gray: #b3b3b3;
 $buttonGray: #6d6d6db3;
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-button{
+button {
   border: none;
   background: none;
 }
 
-body{
+body {
   min-height: 100vh;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  background: $black;
+  font-family: "Roboto", sans-serif;
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   background: $black;
   min-height: 68px;
-  .logo{
+  .logo {
+    transition: .4s ease;
     width: 94px;
     cursor: pointer;
     margin: 0 1.8rem;
   }
 
-  nav{
+  nav {
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    .links{
+    .links {
       a {
         margin-right: 1rem;
         text-decoration: none;
         color: $white;
-        transition: .4s ease;
+        transition: 0.4s ease;
 
-        &:hover{
+        &:hover {
           color: $gray;
         }
       }
     }
-    .buttons{
+    .buttons {
       a {
         text-decoration: none;
         color: $white;
-        margin: 0 .4rem;
-        transition: .4s ease;
-        &:hover{
+        margin: 0 0.4rem;
+        transition: 0.4s ease;
+        &:hover {
           color: $gray;
         }
-
       }
     }
   }
 }
 
 main {
-  .featured{
+  .featured {
     display: flex;
     background-image: url("../assets/cover.jpg");
+    background: linear-gradient(180deg, rgba(0,0,0,.4), transparent), url("../assets/cover.jpg");
     min-height: 400px;
     background-size: cover;
-    .container{
+    background-position:top right;
+    transition: 0.4s ease;
+    .container {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 2rem;
       width: 30rem;
-      h3{
+      h3 {
         color: $white;
         font-size: 48px;
         text-shadow: 1px 1px 2px black;
       }
-      .description{
+      .description {
         color: white;
         text-align: justify;
         padding: 1rem 0;
         text-shadow: 2px 1px 2px black;
       }
 
-      .buttons{
+      .buttons {
         display: flex;
-        button{
+        button {
           display: flex;
           align-items: center;
           border-radius: 4px;
-          padding: .3rem .8rem;
-          margin: 0 .4rem;
+          padding: 0.3rem 0.8rem;
+          margin: 0 0.4rem;
           font-weight: bold;
           background: white;
           cursor: pointer;
-          span{
+          span {
             margin-right: 0.4rem;
           }
         }
 
-        .play{
-          &:hover{
+        .play {
+          &:hover {
             background-color: #ffffffbf;
           }
         }
 
-        .info{
+        .info {
           background: $buttonGray;
           color: white;
-          transition: .4s ease;
+          transition: 0.4s ease;
 
-          &:hover{
+          &:hover {
             background-color: #6d6d6d66;
           }
         }
+      }
+    }
+  }
+}
+.owl-carousel{
+  max-height: 400px;
+}
+.movie {
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
+    padding: .1rem;
+    border-radius: 4px;
+  }
+}
+
+
+@media screen and (max-width: 700px){
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 78px;
+    .logo{
+      margin: 0 .8rem;
+      width: 75px;
+    }
+
+    nav{
+      padding: .4rem .8rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  main{
+    .featured{
+      min-height: 350px;
+
+      .container{
+        padding: 2rem 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  nav{
+    .buttons{
+      a{
+        display: none;
       }
     }
   }
