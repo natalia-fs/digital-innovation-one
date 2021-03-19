@@ -1,0 +1,150 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #141414;
+  min-height: 68px;
+}
+
+header .logo {
+  width: 94px;
+  cursor: pointer;
+  margin: 0 1.8rem;
+}
+
+header nav {
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+header nav .links a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+header nav .links a:hover {
+  color: #b3b3b3;
+}
+
+header nav .buttons a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 .4rem;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+header nav .buttons a:hover {
+  color: #b3b3b3;
+}
+
+main .featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../assets/cover.jpg");
+  min-height: 400px;
+  background-size: cover;
+}
+
+main .featured .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2rem;
+  width: 30rem;
+}
+
+main .featured .container h3 {
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 1px 1px 2px black;
+}
+
+main .featured .container .description {
+  color: white;
+  text-align: justify;
+  padding: 1rem 0;
+  text-shadow: 2px 1px 2px black;
+}
+
+main .featured .container .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .featured .container .buttons button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  padding: .3rem .8rem;
+  margin: 0 .4rem;
+  font-weight: bold;
+  background: white;
+  cursor: pointer;
+}
+
+main .featured .container .buttons button span {
+  margin-right: 0.4rem;
+}
+
+main .featured .container .buttons .play:hover {
+  background-color: #ffffffbf;
+}
+
+main .featured .container .buttons .info {
+  background: #6d6d6db3;
+  color: white;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+main .featured .container .buttons .info:hover {
+  background-color: #6d6d6d66;
+}
+/*# sourceMappingURL=styles.css.map */
